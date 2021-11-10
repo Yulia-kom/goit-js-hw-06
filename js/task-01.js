@@ -1,13 +1,10 @@
 const navItemEl = document.querySelectorAll("li.item");
 console.log(`Number of categories: ${navItemEl.length}`);
 
-const navUlEl = Array.from(document.querySelector('ul#categories').children);
-for (let elem of navUlEl) {
+const categoriesList = document.querySelectorAll('#categories > li');
 
-    let category = elem.firstElementChild.textContent;
-    console.log(`Category: ${category}`);
+categoriesList.forEach(elem => {
 
-    let quantityElem = elem.lastElementChild.children.length;
-    console.log(`Elements: ${quantityElem}`);
-};
+    console.log(`Category: ${elem.firstElementChild.textContent}, Elements: ${elem.lastElementChild.children.length}`);
 
+});
